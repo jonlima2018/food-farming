@@ -1,4 +1,5 @@
 import logo from '../../assets/logo.svg';
+import scroll from '../../assets/scroll.svg';
 import separator from '../../assets/separator.svg';
 import LinkBtn from '../../components/UI/LinkBtn';
 import StyledHome from './Styled';
@@ -24,8 +25,8 @@ function Home() {
                     and vegetable.
                 </p>
                 <LinkBtn title="Read More" />
+                <img className="home__scroll" src={scroll} alt="scroll" />
             </div>
-            <div className="home__background" />
         </StyledHome>
     );
 }

@@ -2,10 +2,23 @@ import styled from 'styled-components';
 import background from '../../assets/background.png';
 
 const StyledHome = styled.section`
-    display: flex;
     margin: 40px 60px 120px;
     height: 634px;
     background: ${({ theme }) => theme.containerBackground};
+    box-shadow: 0px 40px 40px -30px ${({ theme }) => theme.blurBackground};
+
+    &::after {
+        content: '';
+        display: block;
+        z-index: 1;
+        width: 660px;
+        position: absolute;
+        height: 878px;
+        right: 0;
+        top: 0px;
+        background: url(${background});
+        background-repeat: no-repeat;
+    }
 
     .home__content {
         padding: 81px 120px 0;
@@ -51,22 +64,26 @@ const StyledHome = styled.section`
             letter-spacing: 0.06em;
             margin-bottom: 72px;
         }
-    }
 
-    .home__background {
-        display: block;
-        z-index: 1;
-        width: 660px;
-        position: absolute;
-        height: 878px;
-        right: 0;
-        top: 0px;
-        background: url(${background});
-        background-repeat: no-repeat;
+        .home__scroll {
+            margin: 20px auto 40px;
+            display: flex;
+            position: relative;
+
+            &::after {
+                content: '.';
+                z-index: 1;
+                width: 660px;
+                position: absolute;
+                height: 878px;
+                right: 0;
+                top: 0px;
+            }
+        }
     }
 
     @media (max-width: 1260px) {
-        .home__background {
+        &::after {
             display: none;
         }
     }
