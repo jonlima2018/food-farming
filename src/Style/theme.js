@@ -6,6 +6,7 @@ const theme = {
     containerBackground: '#FFFAF3',
     homeTitleFont: "'Playfair Display', serif",
     homeTitleText: '#3f4042',
+    blurBackground: 'rgba(192,141,93,0.4)',
 };
 
 export default theme;
