@@ -69,22 +69,38 @@ const StyledHome = styled.section`
             margin: 20px auto 40px;
             display: flex;
             position: relative;
-
-            &::after {
-                content: '.';
-                z-index: 1;
-                width: 660px;
-                position: absolute;
-                height: 878px;
-                right: 0;
-                top: 0px;
-            }
         }
     }
 
     @media (max-width: 1260px) {
         &::after {
             display: none;
+        }
+    }
+
+    @media (max-width: 800px) {
+        margin: 40px 0 0px;
+        height: 100%;
+
+        .home__content {
+            height: 100%;
+            width: fit-content;
+            padding: 40px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            .home__text {
+                width: 80%;
+                height: 100%;
+                margin: 0 auto 40px;
+            }
+
+            .home__scroll {
+                display: none;
+            }
         }
     }
 `;
